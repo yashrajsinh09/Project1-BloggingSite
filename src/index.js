@@ -5,9 +5,8 @@ const app = express();
 
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://shivamp2001:shivamp2001@mycluster.au9iv5p.mongodb.net/project1-BlogGroup1', {
-    useNewUrlParser: true
-}).then(() => console.log('MongoDb is connected'))
+mongoose.connect('mongodb+srv://shivamp2001:shivamp2001@mycluster.au9iv5p.mongodb.net/project1-BlogGroup1', {useNewUrlParser: true})
+.then(() => console.log('MongoDb is connected'))
     .catch(err => console.log(err));
 
 app.use('/', route)
